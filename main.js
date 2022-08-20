@@ -24,8 +24,8 @@ function gotResult(error, results) {
       console.log(results);
       previous_result = results[0].label;
       var synth = window.speechSynthesis;
-      speak_data = 'Object detected is - '+result[0].label;
-      var utterThis = new  SpeechSynthesisUtterance(speak_data);
+      speak_data = 'Object detected is - '+results[0].label;
+      var utterThis = new SpeechSynthesisUtterance(speak_data);
       synth.speak(utterThis);
 
       document.getElementById("result_object_name").innerHTML = results[0].label;
